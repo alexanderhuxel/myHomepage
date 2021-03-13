@@ -1,0 +1,41 @@
+@import  src\styles.sass
+
+footer
+    width: 100%
+    background: $header
+    height: 150px
+    justify-content: space-between
+    align-items: center
+    display: flex
+    box-shadow: 0px 0px 0px 7px rgba(254,255,249,0.3)
+    .footer__externLinks
+        ul
+            list-style: none
+            li
+                color: $lightwhite
+                font-size: 1.3rem
+                text-align: center
+                a
+                    text-decoration: none
+                    color: $lightwhite
+                    font-size: 1.3rem
+                    &:hover
+                        color: $orange
+                &:nth-of-type(4)
+                    margin-bottom: 20px
+                        
+                        
+    .fa-github
+        color: $lightwhite
+        font-size: 2.5rem
+        margin-right: 20px
+        &:hover
+            color: $orange
+    .footer__logo
+        margin-left: 10px
+        width: 100px
+        height: 60px
+        object-fit: contain
+        &:hover
+            cursor: pointer
+        

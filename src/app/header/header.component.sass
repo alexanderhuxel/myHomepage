@@ -1,0 +1,50 @@
+@import  src\styles.sass
+
+header
+    background: $header
+    width: 100%
+    height: 70px
+    box-shadow: 0px 1px 0px 3px rgba(254,255,249,0.3)
+    nav
+        position: relative
+        display: flex
+        justify-content: space-between
+        .header__flag
+            position: absolute
+            right: 500px
+            top: 20px
+            display: flex
+            justify-content: center
+            align-items: center
+            border: solid red 5px
+            img
+                width: 30px
+                height: 30px
+        .header__logo
+            margin-top: 5px
+            margin-left: 10px
+            object-fit: contain
+            width: 100px
+            height: 60px
+            &:hover
+                cursor: pointer
+        .header__list
+            list-style: none
+            display: flex
+            padding-right: 50px
+            li
+                a
+                    padding: 0px 20px 0px 20px
+                    color: $lightwhite
+                    font-size: 30px
+                    font-family: takota
+                    letter-spacing: .2rem
+                    transition: 225ms ease-in-out all
+                    border-bottom: 5px solid transparent
+                    padding-bottom: 15px
+                    text-decoration: none
+                    &:hover
+                        cursor: pointer
+                        color: $orange
+                        border-bottom: 5px solid #F04D3C
+                        padding-bottom: 15px
