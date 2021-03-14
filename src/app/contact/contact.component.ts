@@ -8,9 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class ContactComponent implements OnInit {
   public contactStatus : boolean = false;
   constructor() { }
-
   ngOnInit(): void {
-    console.log(this.Images)
+  
   }
 
   openContact(){

@@ -1,6 +1,9 @@
 <div id="portfolio" class="portfolio">
-    <h1 class="portfolio__headline">
+    <h1 *ngIf="en" class="portfolio__headline">
         Portfolio
+    </h1>
+    <h1 *ngIf="!en" class="portfolio__headline">
+        Projekte
     </h1>
     <div class="container">
         <div *ngFor="let project of portfolio;" class="card">

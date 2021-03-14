@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-portfolio',
@@ -37,7 +37,7 @@ export class PortfolioComponent implements OnInit {
       "../assets/img/css.svg"
     ]
   }];
-
+ @Input() en : boolean = true;
 
   constructor() { }
 

@@ -12,17 +12,8 @@ header
         position: relative
         display: flex
         justify-content: space-between
-        .header__flag
-            position: absolute
-            right: 500px
-            top: 20px
-            display: flex
-            justify-content: center
-            align-items: center
-            border: solid red 5px
-            img
-                width: 30px
-                height: 30px
+        #burger-button,#burger-menu,#burger-nav
+            display: none
         .header__logo
             margin-top: 5px
             margin-left: 10px
@@ -51,3 +42,122 @@ header
                         color: $orange
                         border-bottom: 5px solid #F04D3C
                         padding-bottom: 15px
+
+#burger-button
+    z-index: 999
+    position: relative
+    display: block!important
+    position: absolute
+    margin: 0
+    padding: 0
+    width: 30px
+    height: 30px
+    font-size: 0
+    text-indent: -9999px
+    appearance: none
+    box-shadow: none
+    border-radius: none
+    border: none
+    cursor: pointer
+    transition: background 0.3s
+    right: 10px
+    background-color: transparent
+    &:hover
+        #burger-menu
+            width: 10px
+            opacity: .8
+        #burger-menu
+            &::after
+                width: 20px
+                opacity: .8
+
+#burger-menu
+    transition: all 225ms ease-in-out
+    position: absolute
+    border-radius: 5px
+    top: 11px
+    right: 2px
+    width: 25px
+    height: 7px
+    display: block
+    background-color: lightgray
+    &::before
+        transition: all 225ms ease-in-out
+        content: ""
+        border-radius: 5px
+        position: absolute
+        top: -9px
+        right: 0px
+        width: 25px
+        height: 7px
+        display: block
+        background-color: lightgray
+    &::after
+        transition: all 225ms ease-in-out
+        content: ""
+        position: absolute
+        border-radius: 5px
+        top: 9px
+        right: 0px
+        width: 25px
+        height: 7px
+        display: block
+        background-color: lightgray
+.active
+    width: 10px!important
+    &::before
+        width: 22px!important
+        &::after
+            width: 17px!important
+@media (max-width:800px)
+
+    header
+        position: relative
+        .header__list
+            display: none
+            li
+                display: none
+    .burger-nav
+        display: block!important
+        position: absolute
+        top: 0px
+        right: 0px
+        width: 300px
+        height: 300px
+        clip-path: circle(100% at 100% 0)
+        background-color: rgba(17,18,34,.8)
+        transition: 405ms ease-in-out all
+        ul
+            position: relative
+            list-style: none
+            li
+                position: absolute
+                &:nth-last-of-type(1)
+                    left: 20px
+                &:nth-last-of-type(2)
+                    left: 45px
+                    top: 90px
+                &:nth-last-of-type(3)
+                    left: 150px
+                    top: 200px
+                    
+                a
+                    color: $lightwhite
+                    font-weight: 700
+                    font-family: 'Fjalla One', sans-serif
+                    text-decoration: none
+                    font-size: 2rem
+
+
+    #burger-menu
+        display: block!important
+    #burger-button
+        position: absolute
+        top: 15px
+        right: 15px
+
+
+
+.responsiveClose
+    background-color: rgba(17,18,34,.8)
+    clip-path: circle(0% at 100% 0)

@@ -47,7 +47,6 @@
             margin: 0
         span
             display: flex
-            flex-shrink: 1
             p
                 &:nth-of-type(1)
                     margin-top: 20px
@@ -71,3 +70,42 @@
             line-height: 1.5rem
             word-spacing: 5px
             font-weight: 500
+
+@media (max-width:800px)
+    .box
+        margin-left: 0px!important
+        justify-content: center
+        align-content: center
+        .box__text
+            width: auto!important
+    .box__message
+        margin-left: unset!important
+        justify-content: center
+        h3
+            text-align: center
+        span
+            flex-wrap: wrap
+            p
+                flex-wrap: wrap
+                &:nth-of-type(1)
+                    text-align: center!important
+                    width: 100%
+                &:nth-of-type(2)
+                    text-align: center!important
+        .btn
+            display: none
+                
+    .imgContainer
+        width: 290px!important // 40px more than the img
+        height: 420px!important // 20px more than the img
+        img
+            width: 250px!important
+            height: 380px!important
+        .cutter
+            width: 1000px
+            height: 1000px
+            left: 100px
+            top: 50px
+            position: absolute
+
+    

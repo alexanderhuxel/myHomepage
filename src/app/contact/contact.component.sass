@@ -22,8 +22,9 @@
             height: 500px
             width: 500px
             position: absolute
+            transform: rotate(25deg)
             right: -100px
-            bottom: -100px
+            bottom: -180px
             background: $background
         .form
             display: flex
@@ -209,3 +210,28 @@ form
             bottom: 5px
             left: 0px
             transition: all 300ms ease
+
+@media (max-width:800px  )
+    .border
+        width: 335px!important
+        height: 470px!important
+        &::after
+            height: 450px!important
+            width: 400px!important
+            position: absolute
+            right: -100px
+            bottom: -100px
+            background: $background
+    .contact
+        margin-bottom: 100px
+        justify-content: center
+        align-items: center
+        .border
+            margin: 0px!important
+            .form
+                width: 295px!important
+                height: 450px!important
+                span
+                    p
+                        font-size: 1.3rem!important
+                        flex-wrap: wrap
