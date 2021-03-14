@@ -1,34 +1,211 @@
 @import src/styles.sass
 .contact
-    background: linear-gradient(360deg, $header 58%, $background 100%)
     width: 100%
     height: 500px
     display: flex
-    justify-content: center
+    justify-content: flex-end
     align-items: center
-    span
-        width: 100%
-        height: 100px
-        position: relative
-        p
 
-            font-family: 'Fjalla One', sans-serif
-            font-size: 2.5rem
-            &:nth-of-type(1)
-                position: absolute
-                left: 38%
-                color: $lightwhite
-            &:nth-of-type(2)
-                position: absolute
-                right: 38%
+    .border
+        margin-bottom: 5%
+        margin-right: 10%
+        width: 540px
+        height: 440px
+        position: relative
+        background: $orange
+        overflow: hidden
+        z-index: 998
+
+        &::after
+            z-index: -999
+            content: ""
+            height: 500px
+            width: 500px
+            position: absolute
+            right: -100px
+            bottom: -100px
+            background: $background
+        .form
+            display: flex
+            align-items: center
+            flex-direction: column
+            width: 500px
+            height: 400px
+            position: absolute
+            background: $background
+            top: 20px
+            overflow: hidden
+            left: 20px
+            .orange
                 color: $orange
-                border: 5px solid transparent
-                border-radius: 20px
-                &:hover
-                    cursor: pointer
-                    border-radius: 20px
-                    border: solid 5px $orange
-                    color: $lightwhite
-                    background: $orange
-                    width: 200px
-                    text-align: center
+                margin-left: 5px
+                margin-right: 5px
+            span
+                width: 100%
+                &:nth-of-type(1)
+                    display: flex
+
+                    p
+                        font-family: 'Fjalla One', sans-serif
+                        color: $lightwhite
+                        font-size: 1.5rem
+                        &:nth-of-type(1)
+                            display: flex
+                            justify-content: center
+                            align-items: center
+                            width: 50%
+                            text-align: center
+                        &:nth-of-type(2)
+                            display: flex
+                            align-items: center
+                            justify-content: center
+                            text-align: center
+                            width: 50%
+                &:nth-of-type(2)
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    p
+                        font-family: 'Fjalla One', sans-serif
+                        font-size: 2rem
+                        color: $lightwhite
+                        &:nth-of-type(1)
+                            color: $orange
+                            border-radius: 20px
+                            border: solid 5px $background
+                            margin-right: 5px
+                            transition: ease-in-out 225ms all
+                            padding: 5px!important
+                            &:hover
+                                cursor: pointer
+                                border: solid 5px $orange
+                                border-radius: 20px
+                                color: white
+                                background: $orange
+                        &:nth-of-type(2)
+.active-contact
+    border: solid 5px $orange
+    border-radius: 20px
+    color: white!important
+    background: $orange
+    &:hover
+        color: $orange!important
+        background: white!important
+        border: 5px solid white!important
+
+form
+    transform: scale(0)
+    transition: all ease-in-out 500ms
+    display: flex
+    flex-direction: column
+    width: 80%
+    height: auto
+    overflow: hidden
+    button
+        margin-top: 10px
+        margin-left: 25%
+        margin-right: 25%
+.mail
+    position: relative
+    margin-bottom: 10px
+    position: relative
+    height: 70px
+    width: 100%
+    textarea
+        border-radius: 5px
+        width: 100%
+        height: 100%
+        color: #595f6e
+        border: none
+        display: flex
+        &:focus
+            & + .label-mail .content-mail
+                transform: translateY(-180%)
+                color: #595f6e
+                font-size: 0px
+        &:valid
+            & + .label-mail .content-mail
+                transform: translateY(-180%)
+                color: #595f6e
+                font-size: 0px
+        &:focus
+            & + .label-mail::after
+                transform: translateX(0%)
+        &:valid
+            & + .label-mail::after
+                transform: translateX(0%)
+    label
+        position: absolute
+        bottom: 0px
+        left: 0%
+        width: 100%
+        height: 100%
+        pointer-events: none
+        border-bottom: 1px solid black
+        &::after
+            content: ""
+            position: absolute
+            height: 100%
+            width: 100%
+            border-bottom: 3px solid $orange
+            left: 0px
+            bottom: -1px
+            transform: translateX(-100%)
+            transition: ease-in-out 225ms all
+        .content-mail
+            position: absolute
+            bottom: 5px
+            left: 0px
+            transition: all 300ms ease
+
+.name
+    margin-bottom: 10px
+    position: relative
+    height: 50px
+    input
+        text-align: left
+        border-radius: 5px
+        margin-bottom: 10px
+        width: 100%
+        height: 50px
+        color: #595f6e
+        border: none
+        &:focus
+            & + .label-name .content-name
+                transform: translateY(-180%)
+                color: #595f6e
+                font-size: 12px
+        &:valid
+            & + .label-name .content-name
+                transform: translateY(-180%)
+                color: #595f6e
+                font-size: 12px
+        &:focus
+            & + .label-name::after
+                transform: translateX(0%)
+        &:valid
+            & + .label-name::after
+                transform: translateX(0%)
+    label
+        position: absolute
+        bottom: 0px
+        left: 0%
+        width: 100%
+        height: 100%
+        pointer-events: none
+        border-bottom: 1px solid black
+        &::after
+            content: ""
+            position: absolute
+            height: 100%
+            width: 100%
+            border-bottom: 3px solid $orange
+            left: 0px
+            bottom: -1px
+            transform: translateX(-100%)
+            transition: ease-in-out 225ms all
+        .content-name
+            position: absolute
+            bottom: 5px
+            left: 0px
+            transition: all 300ms ease

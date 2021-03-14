@@ -42,10 +42,7 @@ export class PortfolioComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    for (let i = 0; i < this.portfolio.length; i++) {
-      console.log(this.portfolio[i].usedTec)
-
-    }
+  
   }
 
 

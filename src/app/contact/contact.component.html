@@ -1,9 +1,32 @@
-<div class="contact">
+<div id="contact" class="contact">
 
     <div class="cutter"></div>
-    <span>
-        <p>Don´t be Shy</p>
-        <p>CONTACT ME</p>
-    </span>
+    <div class="border">
+        <div class="form">
+            <span>
+                <p>wan´t <b class="orange">Work</b> with me ?</p>
+                <p>or <b class="orange">have</b> some Questions?</p>
+            </span>
+            <span>
+                <p (click)="openContact()" id="openContact">CONTACT</p>
+                <p>ME</p>
+            </span>
+            <form id="Contact" action="http://alexander-huxel.developerakademie.com/send_mail.php" method="POST">
+                <div class="name">
+                    <input type="text" id="name" required name="name">
+                    <label class="label-name" for="name">
+                        <span class="content-name">Name</span>
+                    </label>
+                </div>
+                <div class="mail">
+                    <textarea rows="4" cols="50" id="subject" name="message" required></textarea>
+                    <label class="label-mail"   for="subject" type="textarea">
+                        <span class="content-mail">Message</span>
+                    </label>
+                </div>
+                <button class="btn" type="submit" value="Submit">Send</button>
+            </form>
+        </div>
 
+    </div>
 </div>
